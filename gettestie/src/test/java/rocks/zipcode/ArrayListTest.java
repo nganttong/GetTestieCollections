@@ -19,6 +19,16 @@ public class ArrayListTest {
     }
 
     @Test
+    public void testArrayListAdd() {
+        //given
+        List<Person> arrayList = new ArrayList<>();
+        //when
+        boolean actual = arrayList.add(testPersonOne);
+        //then
+        Assert.assertTrue(actual);
+    }
+
+    @Test
     public void testArrayListSize() {
         //given
         List<Person> arrayList = new ArrayList<>();
