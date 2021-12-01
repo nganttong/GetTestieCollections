@@ -40,4 +40,15 @@ public class ArrayListTest {
         //then
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testArrayListAddIndex() {
+        //given
+        List<Person> arrayList = new ArrayList<>();
+        arrayList.add(testPersonOne);
+        //when
+        arrayList.add(0, testPersonTwo);
+        //then
+        Assert.assertEquals(testPersonTwo, arrayList.get(0));
+    }
 }
