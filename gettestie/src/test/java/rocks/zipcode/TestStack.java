@@ -31,7 +31,7 @@ public class TestStack {
     @Test
     public void TestStackPop(){
         //given
-        String expected = "A";
+        String expected = "C";
         //when
         String actual = stack.pop();
         //then

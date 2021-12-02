@@ -33,7 +33,7 @@ public class TreeMapTest {
     }
 
     @Test
-    public void testTreehMapRemove() {
+    public void testTreeMapRemove() {
         //given
         Map<Person, Address> testTreeMap = new TreeMap<>();
         testTreeMap.put(testPersonOne, addressZCW);
