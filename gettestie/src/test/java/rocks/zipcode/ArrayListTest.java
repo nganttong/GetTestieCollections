@@ -21,9 +21,9 @@ public class ArrayListTest {
     @Test
     public void testArrayListAdd() {
         //given
-        List<Person> arrayList = new ArrayList<>();
+        List<Person> testArrayList = new ArrayList<>();
         //when
-        boolean actual = arrayList.add(testPersonOne);
+        boolean actual = testArrayList.add(testPersonOne);
         //then
         Assert.assertTrue(actual);
     }
@@ -31,12 +31,12 @@ public class ArrayListTest {
     @Test
     public void testArrayListSize() {
         //given
-        List<Person> arrayList = new ArrayList<>();
+        List<Person> testArrayList = new ArrayList<>();
         int expected = 2;
-        arrayList.add(testPersonOne);
-        arrayList.add(testPersonTwo);
+        testArrayList.add(testPersonOne);
+        testArrayList.add(testPersonTwo);
         //when
-        int actual = arrayList.size();
+        int actual = testArrayList.size();
         //then
         Assert.assertEquals(expected, actual);
     }
@@ -44,44 +44,45 @@ public class ArrayListTest {
     @Test
     public void testArrayListAddIndex() {
         //given
-        List<Person> arrayList = new ArrayList<>();
-        arrayList.add(testPersonOne);
+        List<Person> testArrayList = new ArrayList<>();
+        testArrayList.add(testPersonOne);
         //when
-        arrayList.add(0, testPersonTwo);
+        testArrayList.add(0, testPersonTwo);
         //then
-        Assert.assertEquals(testPersonTwo, arrayList.get(0));
+        Assert.assertEquals(testPersonTwo, testArrayList.get(0));
     }
 
     @Test
     public void testArrayListAddAll() {
         //given
-        List<Person> arrayListOne = new ArrayList<>();
-        List<Person> arrayListTwo = new ArrayList<>();
-        arrayListTwo.add(testPersonOne);
-        arrayListTwo.add(testPersonTwo);
+        List<Person> testArrayListOne = new ArrayList<>();
+        List<Person> testArrayListTwo = new ArrayList<>();
+        testArrayListTwo.add(testPersonOne);
+        testArrayListTwo.add(testPersonTwo);
         //when
-        arrayListOne.addAll(arrayListTwo);
+        testArrayListOne.addAll(testArrayListTwo);
         //then
-        Assert.assertEquals(arrayListOne, arrayListTwo);
+        Assert.assertEquals(testArrayListOne, testArrayListTwo);
     }
 
     @Test
     public void testArrayListRemove() {
         //given
-        List<Person> arrayList = new ArrayList<>();
-        arrayList.add(testPersonOne);
+        List<Person> testArrayList = new ArrayList<>();
+        testArrayList.add(testPersonOne);
         //when
-        boolean actual = arrayList.remove(testPersonOne);
+        boolean actual = testArrayList.remove(testPersonOne);
+        //then
         Assert.assertTrue(actual);
     }
 
     @Test
     public void testArrayListRemoveIndex(){
         //given
-        List<Person> arrayList = new ArrayList<>();
-        arrayList.add(testPersonOne);
+        List<Person> testArrayList = new ArrayList<>();
+        testArrayList.add(testPersonOne);
         //when
-        Person actual = arrayList.remove(0);
+        Person actual = testArrayList.remove(0);
         //then
         Assert.assertEquals(testPersonOne, actual);
     }
@@ -89,12 +90,12 @@ public class ArrayListTest {
     @Test
     public void testArrayListClear() {
         //given
-        List<Person> arrayList = new ArrayList<>();
-        arrayList.add(testPersonOne);
-        arrayList.add(testPersonTwo);
+        List<Person> testArrayList = new ArrayList<>();
+        testArrayList.add(testPersonOne);
+        testArrayList.add(testPersonTwo);
         //when
-        arrayList.clear();
+        testArrayList.clear();
         //then
-        Assert.assertTrue(arrayList.isEmpty());
+        Assert.assertTrue(testArrayList.isEmpty());
     }
 }
