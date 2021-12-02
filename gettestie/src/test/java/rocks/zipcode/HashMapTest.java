@@ -18,7 +18,7 @@ public class HashMapTest {
     public void setUp() throws Exception {
         testPersonOne = new Person("Cay", 1993);
         testPersonTwo = new Person("Trinh", 1990);
-        Address addressZCW = new Address("N. Orange St", "Wilmington", "19802", "United States");
+        addressZCW = new Address("N. Orange St", "Wilmington", "19802", "United States");
     }
 
     @Test
@@ -28,7 +28,7 @@ public class HashMapTest {
         Address expected = addressZCW;
         //when
         testHashMap.put(testPersonOne, addressZCW);
-        Address actual = testHashMap.get(testPersonOne)
+        Address actual = testHashMap.get(testPersonOne);
         //then
         Assert.assertEquals(expected, actual);
     }
@@ -40,7 +40,7 @@ public class HashMapTest {
         testHashMap.put(testPersonOne, addressZCW);
         //when
         testHashMap.remove(testPersonOne);
-        boolean actual = testHashMap.containsKey(testPersonOne)
+        boolean actual = testHashMap.containsKey(testPersonOne);
         Assert.assertFalse(actual);
     }
 
